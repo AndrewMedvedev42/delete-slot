@@ -8,29 +8,18 @@ const UseStateArray = () => {
 
     return( <section>{
             people.map((induvidual)=>{
-              const {id, name} = induvidual
-
-
-
-
+              const {id, name, price} = induvidual
 
             const deletePerson = (id) =>{
               var newPeople = people.filter((induvidual) => induvidual.id !== id)
-              alert(induvidual.id)
               setPeople(newPeople)
             }
             
-
-
-
-
-
-
             return (
               <div key={id} className="item">
                 <h4>{name}</h4>
-                <h4>{id}</h4>
-                <button onClick={() => {deletePerson(id)}}>Change Title</button>
+                <h4>{price}</h4>
+                <button onClick={() => {deletePerson(id)}}>Delete Item</button>
               </div>
             )
             })

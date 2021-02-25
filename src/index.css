@@ -34,7 +34,7 @@ Variables
   --clr-black: #222;
   --transition: all 0.3s linear;
   --spacing: 0.1rem;
-  --radius: 0.25rem;
+  --radius: 25px;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
   --max-width: 1170px;
@@ -93,21 +93,7 @@ p {
   color: var(--clr-grey-5);
 }
 @media screen and (min-width: 800px) {
-  h1 {
-    font-size: 4rem;
-  }
-  h2 {
-    font-size: 2.5rem;
-  }
-  h3 {
-    font-size: 1.75rem;
-  }
-  h4 {
-    font-size: 1rem;
-  }
-  body {
-    font-size: 1rem;
-  }
+
   h1,
   h2,
   h3,
@@ -157,8 +143,17 @@ p {
   padding: 1rem 2rem;
 }
 .item h4 {
-  margin-bottom: 0;
+  margin:10px;
 }
 .item p {
-  margin-bottom: 0;
+  margin:10px;
+}
+
+.moviePoster{
+  width: 100px;
+  border-radius: var(--radius);
+}
+
+.itemContent{
+  text-align: center;
 }

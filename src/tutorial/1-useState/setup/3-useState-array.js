@@ -4,22 +4,26 @@ import {data} from "../../../data"
 
 const UseStateArray = () => {
 
-  const [people, setPeople] = React.useState(data)
+  const [movies, setPeople] = React.useState(data)
 
     return( <section>{
-            people.map((induvidual)=>{
-              const {id, name, price} = induvidual
+           movies.map((induvidual)=>{
+              const {id, name, year, image, alt} = induvidual
 
             const deletePerson = (id) =>{
-              var newPeople = people.filter((induvidual) => induvidual.id !== id)
+              var newPeople =movies.filter((induvidual) => induvidual.id !== id)
               setPeople(newPeople)
             }
             
             return (
               <div key={id} className="item">
-                <h4>{name}</h4>
-                <h4>{price}</h4>
-                <button onClick={() => {deletePerson(id)}}>Delete Item</button>
+                <img src={image} className="moviePoster" alt={alt} />
+                <div className="itemContent">
+                  <h3>{name}</h3>
+                  <p>{year}</p>
+                  <button onClick={() => {deletePerson(id)}}>Delete Item</button>
+                </div>
+                
               </div>
             )
             })
